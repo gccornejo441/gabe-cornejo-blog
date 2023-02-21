@@ -1,5 +1,6 @@
 <script>
 	import './home/common.css';
+  import Hero from './home/Hero.svelte';
 </script>
 
 <svelte:head>
@@ -13,6 +14,7 @@
 <div class="home">
 	<h1 class="visually-hidden">SvelteKit</h1>
 
+    <Hero />
 	<footer>
 		<p>
 			SvelteKit is <a target="_blank" rel="noreferrer" href="https://github.com/sveltejs/kit"

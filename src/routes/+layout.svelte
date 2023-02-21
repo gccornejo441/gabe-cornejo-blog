@@ -8,7 +8,7 @@
 	import NavItem from '@sveltejs/site-kit/components/NavItem.svelte';
 	import PreloadingIndicator from '@sveltejs/site-kit/components/PreloadingIndicator.svelte';
 	import SkipLink from '@sveltejs/site-kit/components/SkipLink.svelte';
-	import Logo from './home/svelte-logo.svg';
+	import Logo from './home/Logo.svg';
 </script>
 <Icons />
 {#if $navigating}
@@ -23,26 +23,22 @@
 			<!-- the <Nav> component renders this content inside a <ul>, so
 				we need to wrap it in an <li>. TODO if we adopt this design
 				on other sites, change <Nav> so we don't need to do this -->
-			<li>sssssssearc</li>
+			<li>Gabe Cornejo</li>
 		{/if}
 	</svelte:fragment>
 
 	<svelte:fragment slot="nav-right">
-		<NavItem selected={$page.url.pathname.startsWith('/docs') || undefined} href="/docs"
-			>Docs</NavItem
-		>
-		<NavItem selected={$page.url.pathname.startsWith('/faq') || undefined} href="/faq">FAQ</NavItem>
+        <NavItem selected={$page.url.pathname.startsWith('/blog') || undefined} href="/blog">Blog</NavItem>
+                
+		<NavItem selected={$page.url.pathname.startsWith('/pictures') || undefined} href="/pictures">Pictures</NavItem>
+        <NavItem selected={$page.url.pathname.startsWith('/bookmarks') || undefined} href="/bookmarks">Bookmarks</NavItem>
 
-		<li aria-hidden="true"><span class="separator" /></li>
-
-		<NavItem external="https://svelte.dev">Svelte</NavItem>
-
-		<NavItem external="https://svelte.dev/chat" title="Discord Chat">
+		<NavItem external="https://github.com/gccornejo441" title="Gabe's Discord Chat">
 			<span class="small">Discord</span>
 			<span class="large"><Icon name="message-square" /></span>
 		</NavItem>
 
-		<NavItem external="https://github.com/sveltejs/kit" title="GitHub Repo">
+		<NavItem external="https://github.com/gccornejo441" title="Gabe's GitHub Repo">
 			<span class="small">GitHub</span>
 			<span class="large"><Icon name="github" /></span>
 		</NavItem>
