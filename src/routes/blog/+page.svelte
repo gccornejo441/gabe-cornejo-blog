@@ -21,6 +21,7 @@
 	<div class="faqs-content">
 		<section>
 			<PostsList posts={data.posts} />
+			
 		</section>
 	</div>
 </div>
